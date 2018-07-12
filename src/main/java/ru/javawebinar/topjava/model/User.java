@@ -24,6 +24,16 @@ public class User extends AbstractNamedEntity {
         this(id, name, email, password, DEFAULT_CALORIES_PER_DAY, true, EnumSet.of(role, roles));
     }
 
+    public User(Integer id, String name, String email, String password, boolean enabled, Date registered, Set<Role> roles, int caloriesPerDay) {
+        super(null, name);
+        this.email = email;
+        this.password = password;
+        this.enabled = enabled;
+        this.registered = registered;
+        this.roles = roles;
+        this.caloriesPerDay = caloriesPerDay;
+    }
+
     public User(Integer id, String name, String email, String password, int caloriesPerDay, boolean enabled, Set<Role> roles) {
         super(id, name);
         this.email = email;
