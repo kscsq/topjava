@@ -8,6 +8,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%--<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>--%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%--<fmt:setBundle basename="messages.app"/>--%>
-<%--<header><a href="${pageContext.request.contextPath}/"><fmt:message key="app.home"/></a>&nbsp; | &nbsp;<a href="meals"><fmt:message key="app.title"/></a></header>--%>
-<header><a href="${pageContext.request.contextPath}/"><spring:message code="app.home"/></a>&nbsp; | &nbsp;<a href="meals"><spring:message code="app.title"/></a></header>
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+        <a href="meals" class="navbar-brand"><img src="resources/images/icon-meal.png" alt=""><spring:message code="app.title"/> </a>
+        <form class="form-inline my-2"></form>
+        <a href="users" class="btn btn-info mr-1"><spring:message code="user.title"/> </a>
+        <a href="" class="btn btn-primary">
+            <span class="fa fa-sign-in"></span>
+        </a>
+    </div>
+</nav>
